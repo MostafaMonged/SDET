@@ -8,7 +8,7 @@
 .
 └───UI
 │   ├───bug_reports
-│   ├───pages
+│   ├───page_models
 │   ├───results_reports
 │   └───tests
 │       ├───documentation
