@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "mock-user-auth": "^1.0.15"
+  },
+  "scripts": {
+    "dev": "nodemon ./node_modules/mock-user-auth/bin/www.js",
+    "test:create": "jest ./API/test_scripts/create_user.test.js",
+    "test:auth": "jest ./API/test_scripts/authenticate_user.test.js",
+    "test:read": "jest ./API/test_scripts/read_user.test.js",
+    "test:update": "jest ./API/test_scripts/update_user.test.js",
+    "test:delete": "jest ./API/test_scripts/delete_user.test.js",
+    "test:all": "npm run test:create && npm run test:auth && npm run test:read && npm run test:update && npm run test:delete",
+    "test:ui": "nightwatch --config ./UI/nightwatch.conf.js",
+    "test:api": "jest --config ./API/jest.config.js",
+    "test:api:auth": "npm run start:auth & wait-on http://localhost:3000 && npm run test:api"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-html-reporter": "^3.10.2",
+    "supertest": "^7.0.0",
+    "wait-on": "^8.0.1"
+  }
+}
