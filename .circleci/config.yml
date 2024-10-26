@@ -1,0 +1,40 @@
+version: 2.1
+
+jobs:
+  ui_test:
+    docker:
+      - image: cimg/node:latest
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - run:
+          name: Run UI Tests
+          command: npm run test:UI
+
+  api_test:
+    docker:
+      - image: cimg/node:latest
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - run:
+          name: Run API Tests
+          command: npm run test:API
+
+workflows:
+  version: 2
+
+  ui_and_api_tests:
+    jobs:
+      - ui_test:
+          filters:
+            branches:
+              only: UI
+      - api_test:
+          filters:
+            branches:
+              only: API
