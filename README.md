@@ -33,3 +33,5 @@
 └──package.json               
 
 ```
+
+[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/SYQmSapKwUHtGUPnUdXG3X/6PpQF4f2oEPw7oWa274bC2/tree/main.svg?style=svg&circle-token=CCIPRJ_VRrwDqzK4ub4CXmKGRdd5o_bf479a462103b3cfed3d8636d071e3e493af24ff)](https://dl.circleci.com/status-badge/redirect/circleci/SYQmSapKwUHtGUPnUdXG3X/6PpQF4f2oEPw7oWa274bC2/tree/main)
