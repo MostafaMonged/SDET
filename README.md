@@ -1,4 +1,4 @@
-[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/SYQmSapKwUHtGUPnUdXG3X/6PpQF4f2oEPw7oWa274bC2/tree/UI.svg?style=svg&circle-token=CCIPRJ_9jtTCgCyzJn567u9o4TA92_bae7da3980af9d95d243438fba44de2a567fed9c)](https://dl.circleci.com/status-badge/redirect/circleci/SYQmSapKwUHtGUPnUdXG3X/6PpQF4f2oEPw7oWa274bC2/tree/UI)
+![image](https://github.com/user-attachments/assets/e23fc94c-bf16-4269-b228-953b147d9627)[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/SYQmSapKwUHtGUPnUdXG3X/6PpQF4f2oEPw7oWa274bC2/tree/main.svg?style=svg&circle-token=CCIPRJ_9Ap8ooDCGmmbcBMSArEskE_9863b4b75051d4550923f3966f12440f86954d51)](https://dl.circleci.com/status-badge/redirect/circleci/SYQmSapKwUHtGUPnUdXG3X/6PpQF4f2oEPw7oWa274bC2/tree/main)
 # SDET
  SDET 2024 - Technical Task
  
@@ -6,7 +6,7 @@
 
 - [Node.js][(https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html)](https://nodejs.org/en/download/source-code)
 
-Note: Please the follow project structre to find the deliverables
+**Note:** Please the follow project structre to find the deliverables
 
 ## Project Structure
 
@@ -36,6 +36,12 @@ For each of UI and API deliverables:
 - you will find the html for results under the **results_reports** directory.
 - You will find bug tickets under the **bug_reports** directory.
 - You will find tests documentation (if required) under the **test_docs** directory.
+
+## CI/CD
+**Note:**The status badge is failed because there are some test cases that detect bugs in the UI and API. So, this badge will not be Passing until this bugs are fixed.
+As UI tests and API tests are independent, I run them in parallel after dependencies installation.
+![image](https://github.com/user-attachments/assets/9ee95dc7-c0fd-42ac-bce3-510dc08aa9bf)
+
 ## Steps to run the project
 After you clone the repo do the following:
 1) Install dependencies
