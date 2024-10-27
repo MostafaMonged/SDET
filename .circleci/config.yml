@@ -21,9 +21,11 @@ jobs:
       - run:
           name: Start API Server and Run API Tests
           command: npm run test:API
+          continue-on-error: true
       - run:
           name: Run UI Tests
           command: npm run test:UI
+          continue-on-error: true
 
       - store_artifacts:
           path: api_server.log

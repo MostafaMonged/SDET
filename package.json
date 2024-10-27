@@ -11,7 +11,7 @@
     "test:read": "jest ./API/test_scripts/read_user.test.js",
     "test:update": "jest ./API/test_scripts/update_user.test.js",
     "test:delete": "jest ./API/test_scripts/delete_user.test.js",
-    "start:jest": "jest --config ./API/jest.config.js",
+    "start:jest": "jest --config ./API/jest.config.js --runInBand",
     "test:API": "concurrently -k \"npm run dev > api_server.log\" \"sleep 5 && npm run start:jest\""
   },
   "keywords": [],
