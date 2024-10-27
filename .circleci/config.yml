@@ -7,6 +7,11 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install Chrome Dependencies
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y google-chrome-stable libnss3 libgconf-2-4
+      - run:
           name: Install Dependencies
           command: npm install
       - run:
