@@ -3,12 +3,15 @@ version: 2.1
 jobs:
   ui_test:
     docker:
-      - image: cimg/node:18.16.0
+      - image: cimg/node:21.6.1
     steps:
       - checkout
       - run:
           name: Install Dependencies
           command: npm install
+      - run:
+          name: Install Chromedriver
+          command: npm install chromedriver@latest
       - run:
           name: Debug Chromedriver Path
           command: which chromedriver || echo "Chromedriver not found"
