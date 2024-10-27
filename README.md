@@ -6,7 +6,7 @@
 
 - [Node.js][(https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html)](https://nodejs.org/en/download/source-code)
 
-Note: please the follow project structre to find the deliverables
+Note: Please the follow project structre to find the deliverables
 
 ## Project Structure
 
@@ -41,15 +41,15 @@ Note: please the follow project structre to find the deliverables
 ```
 ## Steps to run the project
 After you clone the repo do the following:
-1) install dependencies
+1) Install dependencies
 ```bash
 npm install
 ```
-2) run GUI tests
+2) Run UI tests
 ```bash
 npm run test:UI
 ```
-3) run API tests
+3) Run API tests
 ```bash
 npm run test:API
 ```
@@ -61,3 +61,9 @@ npm run test:read
 npm run test:update
 npm run test:delete
 ```
+## Deliverables
+For each of UI and API deliverables:
+- you will find the html for results under the **results_reports** directory.
+- You will find bug tickets under the **bug_reports** directory.
+- You will find tests documentation (if required) under the **test_docs** directory.
+
