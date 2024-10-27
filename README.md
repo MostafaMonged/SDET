@@ -60,7 +60,7 @@ npm run test:UI
 npm run test:API
 ```
 ### Alternative approach to test specific API route
-You can do so by first running the API server then test the route you want.
+You can do so by first running the API server in a terminal then test the route you want in **another terminal**.
 1) To run the server
 ```bash
 npm run dev
