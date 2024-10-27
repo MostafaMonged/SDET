@@ -41,6 +41,19 @@ Note: please the follow project structre to find the deliverables
 ```
 ## Steps to run the project
 After you clone the repo do the following:
-1)
+1) install dependencies
 ```bash
 npm install
+2) run GUI tests
+```bash
+npm run test:UI
+3) run API tests
+```bash
+npm run test:API
+you can use this alternative way to run API tests manually step by step (create tests then authenticate tests then read then update then delete)
+```bash
+npm run test:create
+npm run test:authenticate
+npm run test:read
+npm run test:update
+npm run test:delete
