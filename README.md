@@ -17,21 +17,13 @@ Note: Please the follow project structre to find the deliverables
 │   ├──/results_reports
 │   ├──/test_docs 
 │   ├──/page_objects                                # Page object models to encapsulate UI element definitions
-│   └──/test_scripts
-│       
+│   ├──/test_scripts                                # UI tests here
+│   └──nightwatch.conf.js
+    
 └───/API
 │   │
-│   ├──/test_scripts 
-│   │  ├──authenticate_user.test.js    
-│   │  ├──create_user.test.js      
-│   │  ├──delete_user.test.js     
-│   │  ├──read_user.test.js    
-│   │  └──update_user.test.js  
-│   │
-│   ├──/utils
-│   │  ├──api_client.js                           # Supertest setup for reusable requests          
-│   │  └──helpers.js                              # Utility functions
-│   │
+│   ├──/test_scripts                                # API tests here 
+│   ├──/utils                                       # Utility functions and Supertest setup for reusable requests
 │   ├──/results_reports           
 │   ├──/bug_reports                
 │   └──jest.config.js
@@ -58,7 +50,13 @@ npm run test:UI
 ```bash
 npm run test:API
 ```
-Alternative way to test specific API route is to use its related command from the list below:
+Alternative way is to test specific API route.
+You can do so by first running the API server then test the route you want.
+To run the server:
+```bash
+npm run dev
+```
+To test single route use the command related to the route you want to test from the commands below:
 ```bash
 npm run test:create
 npm run test:authenticate
