@@ -1,7 +1,12 @@
 [![CircleCI](https://dl.circleci.com/status-badge/img/circleci/SYQmSapKwUHtGUPnUdXG3X/6PpQF4f2oEPw7oWa274bC2/tree/UI.svg?style=svg&circle-token=CCIPRJ_9jtTCgCyzJn567u9o4TA92_bae7da3980af9d95d243438fba44de2a567fed9c)](https://dl.circleci.com/status-badge/redirect/circleci/SYQmSapKwUHtGUPnUdXG3X/6PpQF4f2oEPw7oWa274bC2/tree/UI)
 # SDET
  SDET 2024 - Technical Task
+ 
+## Requirements
 
+- [Node.js][(https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html)](https://nodejs.org/en/download/source-code)
+
+# Note: please the follow project structre to find the deliverables
 
 ## Project Structure
 
