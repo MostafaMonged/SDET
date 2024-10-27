@@ -40,4 +40,12 @@ jobs:
             google-chrome --version
             chromedriver --version
           name: Check install
-workflows: null
+workflows:
+  version: 2
+
+  test_orb:
+    jobs:
+      - test:
+          filters:
+            branches:
+              only: UI
