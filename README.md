@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/e23fc94c-bf16-4269-b228-953b147d9627)[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/SYQmSapKwUHtGUPnUdXG3X/6PpQF4f2oEPw7oWa274bC2/tree/main.svg?style=svg&circle-token=CCIPRJ_9Ap8ooDCGmmbcBMSArEskE_9863b4b75051d4550923f3966f12440f86954d51)](https://dl.circleci.com/status-badge/redirect/circleci/SYQmSapKwUHtGUPnUdXG3X/6PpQF4f2oEPw7oWa274bC2/tree/main)
+[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/SYQmSapKwUHtGUPnUdXG3X/6PpQF4f2oEPw7oWa274bC2/tree/main.svg?style=svg&circle-token=CCIPRJ_9Ap8ooDCGmmbcBMSArEskE_9863b4b75051d4550923f3966f12440f86954d51)](https://dl.circleci.com/status-badge/redirect/circleci/SYQmSapKwUHtGUPnUdXG3X/6PpQF4f2oEPw7oWa274bC2/tree/main)
 # SDET
  SDET 2024 - Technical Task
  
@@ -40,7 +40,8 @@ For each of UI and API deliverables:
 ## CI/CD
 **Note:**The status badge is failed because there are some test cases that detect bugs in the UI and API. So, this badge will not be Passing until this bugs are fixed.
 As UI tests and API tests are independent, I run them in parallel after dependencies installation.
-![image](https://github.com/user-attachments/assets/9ee95dc7-c0fd-42ac-bce3-510dc08aa9bf)
+![image](https://github.com/user-attachments/assets/93415409-fa50-48c2-9c7e-f8558faa34a3)
+
 
 ## Steps to run the project
 After you clone the repo do the following:
