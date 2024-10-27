@@ -3,7 +3,7 @@ orbs:
   browser-tools: circleci/browser-tools@1.4.8
 
 jobs:
-  run_tests:
+  install_dependencies:
     docker:
       - image: cimg/node:18.14.0-browsers
     steps:
@@ -15,18 +15,41 @@ jobs:
           command: |
             google-chrome --version
             chromedriver --version
+      - restore_cache:
+          keys:
+            - node-deps-{{ checksum "package-lock.json" }}
+            - node-deps-
       - run:
           name: Install Dependencies
           command: npm install
-      - run:
-          name: Start API Server and Run API Tests
-          command: npm run test:API
-          continue-on-error: true
+      - save_cache:
+          paths:
+            - ./node_modules
+          key: node-deps-{{ checksum "package-lock.json" }}
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
+
+  run_ui_tests:
+    docker:
+      - image: cimg/node:18.14.0-browsers
+    steps:
+      - attach_workspace:
+          at: .
       - run:
           name: Run UI Tests
           command: npm run test:UI
-          continue-on-error: true
 
+  run_api_tests:
+    docker:
+      - image: cimg/node:18.14.0
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: Start API Server and Run API Tests
+          command: npm run test:API
       - store_artifacts:
           path: api_server.log
           destination: api_server_logs
@@ -35,7 +58,20 @@ workflows:
   version: 2
   run_all_tests:
     jobs:
-      - run_tests:
+      - install_dependencies:
           filters:
             branches:
               only: main
+      - run_ui_tests:
+          requires:
+            - install_dependencies
+          filters:
+            branches:
+              only: main
+      - run_api_tests:
+          requires:
+            - install_dependencies
+          filters:
+            branches:
+              only: main
+

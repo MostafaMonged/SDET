@@ -82,7 +82,7 @@ describe('Create User API Tests', () => {
                 name: 'reda',
                 email: 'reda@gmail.com'
             });
-        console.log(response.body);  // Log the response body to inspect what it contains
+        // console.log(response.body);  // Log the response body to inspect what it contains
         expect(response.statusCode).toBe(401);
         expect(response.body).toHaveProperty('message', 'Missing required fields');     // I wrote this message but it should be specified in the API spesification
     });
@@ -94,7 +94,7 @@ describe('Create User API Tests', () => {
                 email: 'anas@gmail.com',
                 password: 'password123'
             });
-        console.log(response.body);  // Log the response body to inspect what it contains
+        // console.log(response.body);  // Log the response body to inspect what it contains
         expect(response.statusCode).toBe(401);
         expect(response.body).toHaveProperty('message', 'Missing required fields');     // I wrote this message but it should be specified in the API spesification
     });
@@ -106,7 +106,7 @@ describe('Create User API Tests', () => {
                 name: 'osama',
                 password: 'password123'
             });
-        console.log(response.body);  // Log the response body to inspect what it contains
+        // console.log(response.body);  // Log the response body to inspect what it contains
         expect(response.statusCode).toBe(401);
         expect(response.body).toHaveProperty('message', 'Missing required fields');     // I wrote this message but it should be specified in the API spesification
     });
