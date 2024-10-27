@@ -65,13 +65,14 @@ You can do so by first running the API server then test the route you want.
 ```bash
 npm run dev
 ```
-2) To test single route use the command related to the route you want to test from the commands below
-```bash
-npm run test:create
-npm run test:authenticate
-npm run test:read
-npm run test:update
-npm run test:delete
-```
+2) To test individual routes, use the corresponding command below:
+
+| Route        | Command                   |
+|--------------|---------------------------|
+| Create       | `npm run test:create`     |
+| Authenticate | `npm run test:authenticate` |
+| Read         | `npm run test:read`       |
+| Update       | `npm run test:update`     |
+| Delete       | `npm run test:delete`     |
 
 
