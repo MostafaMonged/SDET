@@ -5,94 +5,94 @@
 
   <testsuite name="contact_us_test"
     errors="0" failures="4" hostname="" id="" package="contact_us_test" skipped="0"
-    tests="12" time="98.45" timestamp="">
+    tests="12" time="92.31" timestamp="">
   
-    <testcase name="Valid Test Case 1: Submit with required fields only" classname="contact_us_test" time="6.005" assertions="2">
+    <testcase name="Valid Test Case 1: Submit with required fields only" classname="contact_us_test" time="5.041" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="Valid Test Case 2: Submit with required fields and Order Reference" classname="contact_us_test" time="2.024" assertions="2">
+    <testcase name="Valid Test Case 2: Submit with required fields and Order Reference" classname="contact_us_test" time="1.847" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="Valid Test Case 3: Submit with required fields and File Upload" classname="contact_us_test" time="2.022" assertions="2">
+    <testcase name="Valid Test Case 3: Submit with required fields and File Upload" classname="contact_us_test" time="1.878" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="Valid Test Case 4: Submit with all fields" classname="contact_us_test" time="2.229" assertions="2">
+    <testcase name="Valid Test Case 4: Submit with all fields" classname="contact_us_test" time="1.935" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="Invalid Test Case 1: Missing Email" classname="contact_us_test" time="1.870" assertions="2">
+    <testcase name="Invalid Test Case 1: Missing Email" classname="contact_us_test" time="1.700" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="Invalid Test Case 2: Missing Subject Heading" classname="contact_us_test" time="1.914" assertions="2">
+    <testcase name="Invalid Test Case 2: Missing Subject Heading" classname="contact_us_test" time="1.760" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="Invalid Test Case 3: Missing Message" classname="contact_us_test" time="1.790" assertions="2">
+    <testcase name="Invalid Test Case 3: Missing Message" classname="contact_us_test" time="1.738" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="Invalid Test Case 4: Missing Email and Subject Heading" classname="contact_us_test" time="7.153" assertions="3">
+    <testcase name="Invalid Test Case 4: Missing Email and Subject Heading" classname="contact_us_test" time="7.012" assertions="3">
 
     
 
-      <failure message="Testing if element &lt;Element [name=@errorText]&gt; contains text &#39;Please select a subject from the list provided.&#39; in 5000ms - expected &#34;contains text &#39;Please select a subject from the list provided.&#39;&#34; but got: &#34;does not contain &#39;Please select a subject from the list provided.&#39;&#34; (5334ms)">    at Invalid Test Case 4: Missing Email and Subject Heading (D:\Mostafa\My_Learning_Projects\SDET\SDET\UI\test_scripts\contact_us_test.js:102:21)</failure>
-
-    
-    </testcase>
-  
-    <testcase name="Invalid Test Case 5: Missing Email and Message" classname="contact_us_test" time="7.384" assertions="3">
-
-    
-
-      <failure message="Testing if element &lt;Element [name=@errorText]&gt; contains text &#39;The message cannot be blank.&#39; in 5000ms - expected &#34;contains text &#39;The message cannot be blank.&#39;&#34; but got: &#34;does not contain &#39;The message cannot be blank.&#39;&#34; (5336ms)">    at Invalid Test Case 5: Missing Email and Message (D:\Mostafa\My_Learning_Projects\SDET\SDET\UI\test_scripts\contact_us_test.js:113:21)</failure>
+      <failure message="Testing if element &lt;Element [name=@errorText]&gt; contains text &#39;Please select a subject from the list provided.&#39; in 5000ms - expected &#34;contains text &#39;Please select a subject from the list provided.&#39;&#34; but got: &#34;does not contain &#39;Please select a subject from the list provided.&#39;&#34; (5316ms)">    at Invalid Test Case 4: Missing Email and Subject Heading (D:\Mostafa\My_Learning_Projects\SDET\SDET\UI\test_scripts\contact_us_test.js:102:21)</failure>
 
     
     </testcase>
   
-    <testcase name="Invalid Test Case 6: Missing Subject Heading and Message" classname="contact_us_test" time="7.368" assertions="3">
+    <testcase name="Invalid Test Case 5: Missing Email and Message" classname="contact_us_test" time="7.109" assertions="3">
 
     
 
-      <failure message="Testing if element &lt;Element [name=@errorText]&gt; contains text &#39;Please select a subject from the list provided.&#39; in 5000ms - expected &#34;contains text &#39;Please select a subject from the list provided.&#39;&#34; but got: &#34;does not contain &#39;Please select a subject from the list provided.&#39;&#34; (5318ms)">    at Invalid Test Case 6: Missing Subject Heading and Message (D:\Mostafa\My_Learning_Projects\SDET\SDET\UI\test_scripts\contact_us_test.js:123:21)</failure>
-
-    
-    </testcase>
-  
-    <testcase name="Invalid Test Case 7: Missing All Required Fields" classname="contact_us_test" time="7.280" assertions="3">
-
-    
-
-      <failure message="Testing if element &lt;Element [name=@errorText]&gt; contains text &#39;Please select a subject from the list provided.&#39; in 5000ms - expected &#34;contains text &#39;Please select a subject from the list provided.&#39;&#34; but got: &#34;does not contain &#39;Please select a subject from the list provided.&#39;&#34; (5318ms)">    at Invalid Test Case 7: Missing All Required Fields (D:\Mostafa\My_Learning_Projects\SDET\SDET\UI\test_scripts\contact_us_test.js:132:21)</failure>
+      <failure message="Testing if element &lt;Element [name=@errorText]&gt; contains text &#39;The message cannot be blank.&#39; in 5000ms - expected &#34;contains text &#39;The message cannot be blank.&#39;&#34; but got: &#34;does not contain &#39;The message cannot be blank.&#39;&#34; (5339ms)">    at Invalid Test Case 5: Missing Email and Message (D:\Mostafa\My_Learning_Projects\SDET\SDET\UI\test_scripts\contact_us_test.js:113:21)</failure>
 
     
     </testcase>
   
-    <testcase name="Invalid Test Case 8: Submit with required fields but Invalid Email Format" classname="contact_us_test" time="2.152" assertions="2">
+    <testcase name="Invalid Test Case 6: Missing Subject Heading and Message" classname="contact_us_test" time="7.145" assertions="3">
+
+    
+
+      <failure message="Testing if element &lt;Element [name=@errorText]&gt; contains text &#39;Please select a subject from the list provided.&#39; in 5000ms - expected &#34;contains text &#39;Please select a subject from the list provided.&#39;&#34; but got: &#34;does not contain &#39;Please select a subject from the list provided.&#39;&#34; (5295ms)">    at Invalid Test Case 6: Missing Subject Heading and Message (D:\Mostafa\My_Learning_Projects\SDET\SDET\UI\test_scripts\contact_us_test.js:123:21)</failure>
+
+    
+    </testcase>
+  
+    <testcase name="Invalid Test Case 7: Missing All Required Fields" classname="contact_us_test" time="7.032" assertions="3">
+
+    
+
+      <failure message="Testing if element &lt;Element [name=@errorText]&gt; contains text &#39;Please select a subject from the list provided.&#39; in 5000ms - expected &#34;contains text &#39;Please select a subject from the list provided.&#39;&#34; but got: &#34;does not contain &#39;Please select a subject from the list provided.&#39;&#34; (5346ms)">    at Invalid Test Case 7: Missing All Required Fields (D:\Mostafa\My_Learning_Projects\SDET\SDET\UI\test_scripts\contact_us_test.js:132:21)</failure>
+
+    
+    </testcase>
+  
+    <testcase name="Invalid Test Case 8: Submit with required fields but Invalid Email Format" classname="contact_us_test" time="1.926" assertions="2">
 
     
 

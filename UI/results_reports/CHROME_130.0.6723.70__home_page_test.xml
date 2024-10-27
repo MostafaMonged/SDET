@@ -5,9 +5,9 @@
 
   <testsuite name="home_page_test"
     errors="0" failures="2" hostname="" id="" package="home_page_test" skipped="0"
-    tests="1" time="34.95" timestamp="">
+    tests="1" time="34.47" timestamp="">
   
-    <testcase name="Search for &#34;dress&#34; on homepage and verify item names in results" classname="home_page_test" time="17.48" assertions="11">
+    <testcase name="Search for &#34;dress&#34; on homepage and verify item names in results" classname="home_page_test" time="17.23" assertions="11">
 
     
 
@@ -25,11 +25,11 @@
 
     
 
-      <failure message="Verifying product 6 contains &#34;Dress&#34; in the name in 5000ms - expected &#34;contains text &#39;Dress&#39;&#34; but got: &#34;does not contain &#39;Dress&#39;&#34; (5400ms)">    at Page.verifyProductContainsText (D:\Mostafa\My_Learning_Projects\SDET\SDET\UI\page_objects\homePage.js:25:32)
+      <failure message="Verifying product 6 contains &#34;Dress&#34; in the name in 5000ms - expected &#34;contains text &#39;Dress&#39;&#34; but got: &#34;does not contain &#39;Dress&#39;&#34; (5379ms)">    at Page.verifyProductContainsText (D:\Mostafa\My_Learning_Projects\SDET\SDET\UI\page_objects\homePage.js:25:32)
     at D:\Mostafa\My_Learning_Projects\SDET\SDET\UI\test_scripts\home_page_test.js:22:18
     at NightwatchAPI.&lt;anonymous&gt; (D:\Mostafa\My_Learning_Projects\SDET\SDET\UI\page_objects\homePage.js:19:11)</failure>
 
-      <failure message="Verifying product 7 contains &#34;Dress&#34; in the name in 5000ms - expected &#34;contains text &#39;Dress&#39;&#34; but got: &#34;does not contain &#39;Dress&#39;&#34; (5405ms)">    at Page.verifyProductContainsText (D:\Mostafa\My_Learning_Projects\SDET\SDET\UI\page_objects\homePage.js:25:32)
+      <failure message="Verifying product 7 contains &#34;Dress&#34; in the name in 5000ms - expected &#34;contains text &#39;Dress&#39;&#34; but got: &#34;does not contain &#39;Dress&#39;&#34; (5404ms)">    at Page.verifyProductContainsText (D:\Mostafa\My_Learning_Projects\SDET\SDET\UI\page_objects\homePage.js:25:32)
     at D:\Mostafa\My_Learning_Projects\SDET\SDET\UI\test_scripts\home_page_test.js:22:18
     at NightwatchAPI.&lt;anonymous&gt; (D:\Mostafa\My_Learning_Projects\SDET\SDET\UI\page_objects\homePage.js:19:11)</failure>
 

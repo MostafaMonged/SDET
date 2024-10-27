@@ -12,8 +12,9 @@
     "test:update": "jest ./API/test_scripts/update_user.test.js",
     "test:delete": "jest ./API/test_scripts/delete_user.test.js",
     "start:jest": "jest --config ./API/jest.config.js --runInBand",
-    "test:API": "concurrently -k \"npm run dev > api_server.log\" \"sleep 5 && npm run start:jest\""
-  },
+    "test:API:unix": "concurrently -k \"npm run dev > api_server.log\" \"sleep 5 && npm run start:jest\"",
+    "test:API:win": "concurrently -k \"npm run dev > api_server.log\" \"powershell -Command Start-Sleep -Seconds 5; npm run start:jest\""
+    },
   "keywords": [],
   "author": "",
   "license": "ISC",
