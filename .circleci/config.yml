@@ -10,7 +10,14 @@ jobs:
           name: Install Chrome Dependencies
           command: |
             sudo apt-get update
-            sudo apt-get install -y google-chrome-stable libnss3 libgconf-2-4
+            sudo apt-get install -y google-chrome-stable libnss3 libgconf-2-4 wget
+      - run:
+          name: Install Chrome
+          command: |
+            wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+            sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+            sudo apt-get update
+            sudo apt-get install -y google-chrome-stable
       - run:
           name: Install Dependencies
           command: npm install
