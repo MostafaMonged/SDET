@@ -11,15 +11,17 @@
     "test:read": "jest ./API/test_scripts/read_user.test.js",
     "test:update": "jest ./API/test_scripts/update_user.test.js",
     "test:delete": "jest ./API/test_scripts/delete_user.test.js",
-    "test:API": "jest --config ./API/jest.config.js"
+    "start:jest": "jest --config ./API/jest.config.js",
+    "test:API": "concurrently -k \"npm run dev > api_server.log\" \"sleep 5 && npm run start:jest\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nightwatch": "^3.8.0",
+    "concurrently": "^9.0.1",
     "jest": "^29.7.0",
     "jest-html-reporter": "^3.10.2",
+    "nightwatch": "^3.8.0",
     "supertest": "^7.0.0"
   },
   "dependencies": {

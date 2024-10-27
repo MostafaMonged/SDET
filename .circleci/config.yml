@@ -1,31 +1,39 @@
 version: 2.1
 orbs:
   browser-tools: circleci/browser-tools@1.4.8
+
 jobs:
-  ui_test:
+  run_tests:
     docker:
       - image: cimg/node:18.14.0-browsers
     steps:
+      - checkout
       - browser-tools/install-chrome
       - browser-tools/install-chromedriver
       - run:
-          name: Check install
+          name: Check Browser Installation
           command: |
             google-chrome --version
             chromedriver --version
-      - checkout
       - run:
           name: Install Dependencies
           command: npm install
       - run:
           name: Run UI Tests
           command: npm run test:UI
+      - run:
+          name: Start API Server and Run API Tests
+          command: npm run test:API
+
+      - store_artifacts:
+          path: api_server.log
+          destination: api_server_logs
 
 workflows:
   version: 2
-  ui_and_api_tests:
+  run_all_tests:
     jobs:
-      - ui_test:
+      - run_tests:
           filters:
             branches:
-              only: UI
+              only: main
