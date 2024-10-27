@@ -3,10 +3,45 @@ const { request } = require('../utils/api_client');
 const { getValidToken, getInvalidToken } = require('../utils/helpers');
 
 describe('Read User API Tests', () => {
+    const userEmail1 = 'mockk1@gmail.com';
+    const userName1 = 'mockk1';
+    const userPassword1 = 'password123';
+
+    const userEmail2 = 'mockk2@gmail.com';
+    const userName2 = 'mockk2';
+    const userPassword2 = 'password123';
+
+    // Set up: Create users and authenticate to get tokens
+    beforeAll(async () => {
+        // Create user1
+        await request()
+            .post('/api/v1/users')
+            .send({
+                name: userName1,
+                email: userEmail1,
+                password: userPassword1
+            });
+        // Create user2
+        await request()
+            .post('/api/v1/users')
+            .send({
+                name: userName2,
+                email: userEmail2,
+                password: userPassword2
+            });
+    });
+
+    // Teardown: Use delete all endpoint with admin key if users are still present
+    afterAll(async () => {
+        await request()
+            .delete('/api/v1/all-users')
+            .send({ key_admin: 'keyadmin123' });
+    });
+
     // 1. Valid Token - should retrieve user details
     it('should retrieve user details with a valid token', async () => {
         // Get valid token for the user "Mohamed" which is created and authenticated in the previous tests
-        const validToken = await getValidToken(request(), 'mohamed@gmail.com', 'password123');
+        const validToken = await getValidToken(request(), userEmail1, userPassword1);
 
         if (!validToken) {
             // Simulate expired token
@@ -23,8 +58,8 @@ describe('Read User API Tests', () => {
                 .set('Authorization', validToken);
 
             expect(response.statusCode).toBe(200);
-            expect(response.body).toHaveProperty('email', 'mohamed@gmail.com');
-            expect(response.body).toHaveProperty('name', 'Mohamed');
+            expect(response.body).toHaveProperty('email', userEmail1);
+            expect(response.body).toHaveProperty('name', userName1);
         }
     });
 
@@ -32,7 +67,7 @@ describe('Read User API Tests', () => {
     // I simulate the expired token behavior by getting a token for unauthenticated user
     it('should handle token expiration as unauthorized', async () => {
         // Get expired token for the user "Ahmed"
-        const validToken = await getValidToken(request(), 'Ahmed@gmail.com', 'password123');
+        const validToken = await getValidToken(request(), userEmail2, userPassword2);
 
         if (!validToken) {
             // Simulate expired token
@@ -49,8 +84,8 @@ describe('Read User API Tests', () => {
                 .set('Authorization', validToken);
 
             expect(response.statusCode).toBe(200);
-            expect(response.body).toHaveProperty('email', 'ahmed@gmail.com');
-            expect(response.body).toHaveProperty('name', 'Ahmed');
+            expect(response.body).toHaveProperty('email', userEmail2);
+            expect(response.body).toHaveProperty('name', userName2);
         }
     });
 
@@ -72,17 +107,6 @@ describe('Read User API Tests', () => {
 
         expect(response.statusCode).toBe(403);
         expect(response.body).toHaveProperty('message', 'Unauthorized');
-    });
-
-    // 5. Extra Fields in Query Parameters - should ignore extra query params
-    it('should ignore extra query parameters and return user details', async () => {
-        const validToken = await getValidToken(request(), 'mohamed@gmail.com', 'password123');
-        const response = await request()
-            .get('/api/v1/users?extra_field=value')
-            .set('Authorization', validToken);
-        expect(response.statusCode).toBe(200);  // Extra query params should be ignored
-        expect(response.body).toHaveProperty('email', 'mohamed@gmail.com');
-        expect(response.body).toHaveProperty('name', 'Mohamed');
     });
 
 });

@@ -15,6 +15,13 @@ describe('Create User API Tests', () => {
         expect(response.body).toHaveProperty('message', 'Users deleted with success');
     });
 
+    // Teardown: Use delete all endpoint with admin key if users are still present
+    afterAll(async () => {
+        await request()
+            .delete('/api/v1/all-users')
+            .send({ key_admin: 'keyadmin123' });
+    });
+
     // 2. Valid User Creation
     it('should create a user successfully', async () => {
         const response = await request()

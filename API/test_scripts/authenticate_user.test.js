@@ -2,14 +2,36 @@
 const { request } = require('../utils/api_client');
 
 describe('User Authentication API Tests', () => {
+    const userEmail1 = 'mohamed@gmail.com';
+    const userName1 = 'mohamed';
+    const userPassword1 = 'password123';
+    // Set up: Create a user before the tests
+    beforeAll(async () => {
+        // Create the user1 for tests
+        await request()
+            .post('/api/v1/users')
+            .send({
+                name: userName1,
+                email: userEmail1,
+                password: userPassword1
+            });
+
+    });
+
+    // Teardown: Delete the user after all tests are completed
+    afterAll(async () => {
+        await request()
+            .delete('/api/v1/all-users')
+            .send({ key_admin: 'keyadmin123' });
+    });
 
     // 1. Valid Authentication
     it('should authenticate user and return a token', async () => {
         const response = await request()
             .post('/api/v1/auth')
             .send({
-                email: 'mohamed@gmail.com',
-                password: 'password123'
+                email: userEmail1,
+                password: userPassword1
             });
 
         expect(response.statusCode).toBe(200);
@@ -22,7 +44,7 @@ describe('User Authentication API Tests', () => {
             .post('/api/v1/auth')
             .send({
                 email: 'invalid@gmail.com',
-                password: 'password123'
+                password: userPassword1
             });
 
         expect(response.statusCode).toBe(401);
@@ -34,7 +56,7 @@ describe('User Authentication API Tests', () => {
         const response = await request()
             .post('/api/v1/auth')
             .send({
-                email: 'mohamed@gmail.com',
+                email: userEmail1,
                 password: 'wrongpassword'
             });
 
@@ -72,8 +94,8 @@ describe('User Authentication API Tests', () => {
         const response = await request()
             .post('/api/v1/auth')
             .send({
-                email: 'mohamed@gmail.com',
-                password: 'password123',
+                email: userEmail1,
+                password: userPassword1,
                 age: 30,  // Extra field not required
                 address: '123 Main St'  // Extra field not required
             });
