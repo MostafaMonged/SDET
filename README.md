@@ -39,6 +39,11 @@ Note: Please the follow project structre to find the deliverables
 └──package.json               
 
 ```
+## Deliverables
+For each of UI and API deliverables:
+- you will find the html for results under the **results_reports** directory.
+- You will find bug tickets under the **bug_reports** directory.
+- You will find tests documentation (if required) under the **test_docs** directory.
 ## Steps to run the project
 After you clone the repo do the following:
 1) Install dependencies
@@ -61,9 +66,5 @@ npm run test:read
 npm run test:update
 npm run test:delete
 ```
-## Deliverables
-For each of UI and API deliverables:
-- you will find the html for results under the **results_reports** directory.
-- You will find bug tickets under the **bug_reports** directory.
-- You will find tests documentation (if required) under the **test_docs** directory.
+
 
