@@ -6,7 +6,7 @@
 
 - [Node.js][(https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html)](https://nodejs.org/en/download/source-code)
 
-# Note: please the follow project structre to find the deliverables
+Note: please the follow project structre to find the deliverables
 
 ## Project Structure
 
