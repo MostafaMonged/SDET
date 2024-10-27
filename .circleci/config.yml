@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   ui_test:
     docker:
-      - image: cimg/node:16.17
+      - image: cimg/node:21.6.1
     steps:
       - checkout
       - run:
