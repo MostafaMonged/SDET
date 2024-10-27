@@ -45,6 +45,7 @@ For each of UI and API deliverables:
 
 
 ## Steps to run the project
+# Suggested Approach
 After you clone the repo do the following:
 1) Install dependencies
 ```bash
@@ -58,13 +59,13 @@ npm run test:UI
 ```bash
 npm run test:API
 ```
-Alternative way is to test specific API route.
+# Alternative approach to test specific API route
 You can do so by first running the API server then test the route you want.
-To run the server:
+1) To run the server
 ```bash
 npm run dev
 ```
-To test single route use the command related to the route you want to test from the commands below:
+2) To test single route use the command related to the route you want to test from the commands below
 ```bash
 npm run test:create
 npm run test:authenticate
