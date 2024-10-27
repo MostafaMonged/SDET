@@ -7,9 +7,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install Chromedriver Globally
-          command: npm install -g chromedriver
-      - run:
           name: Install Dependencies
           command: npm install
       - run:
