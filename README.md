@@ -16,7 +16,7 @@ Note: Please the follow project structre to find the deliverables
 │   ├──/bug_reports
 │   ├──/results_reports
 │   ├──/test_docs 
-│   ├──/page_models                                # Page object models to encapsulate UI element definitions
+│   ├──/page_objects                                # Page object models to encapsulate UI element definitions
 │   └──/test_scripts
 │       
 └───/API
