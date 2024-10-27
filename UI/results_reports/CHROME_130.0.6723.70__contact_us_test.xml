@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="4"
+            tests="12">
+
+  <testsuite name="contact_us_test"
+    errors="0" failures="4" hostname="" id="" package="contact_us_test" skipped="0"
+    tests="12" time="97.10" timestamp="">
+  
+    <testcase name="Valid Test Case 1: Submit with required fields only" classname="contact_us_test" time="5.474" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Valid Test Case 2: Submit with required fields and Order Reference" classname="contact_us_test" time="2.356" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Valid Test Case 3: Submit with required fields and File Upload" classname="contact_us_test" time="2.132" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Valid Test Case 4: Submit with all fields" classname="contact_us_test" time="2.180" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Invalid Test Case 1: Missing Email" classname="contact_us_test" time="1.934" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Invalid Test Case 2: Missing Subject Heading" classname="contact_us_test" time="1.907" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Invalid Test Case 3: Missing Message" classname="contact_us_test" time="1.856" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Invalid Test Case 4: Missing Email and Subject Heading" classname="contact_us_test" time="7.235" assertions="3">
+
+    
+
+      <failure message="Testing if element &lt;Element [name=@errorText]&gt; contains text &#39;Please select a subject from the list provided.&#39; in 5000ms - expected &#34;contains text &#39;Please select a subject from the list provided.&#39;&#34; but got: &#34;does not contain &#39;Please select a subject from the list provided.&#39;&#34; (5334ms)">    at Invalid Test Case 4: Missing Email and Subject Heading (D:\Mostafa\My_Learning_Projects\SDET\SDET\UI\test_scripts\contact_us_test.js:102:21)</failure>
+
+    
+    </testcase>
+  
+    <testcase name="Invalid Test Case 5: Missing Email and Message" classname="contact_us_test" time="7.202" assertions="3">
+
+    
+
+      <failure message="Testing if element &lt;Element [name=@errorText]&gt; contains text &#39;The message cannot be blank.&#39; in 5000ms - expected &#34;contains text &#39;The message cannot be blank.&#39;&#34; but got: &#34;does not contain &#39;The message cannot be blank.&#39;&#34; (5354ms)">    at Invalid Test Case 5: Missing Email and Message (D:\Mostafa\My_Learning_Projects\SDET\SDET\UI\test_scripts\contact_us_test.js:113:21)</failure>
+
+    
+    </testcase>
+  
+    <testcase name="Invalid Test Case 6: Missing Subject Heading and Message" classname="contact_us_test" time="7.178" assertions="3">
+
+    
+
+      <failure message="Testing if element &lt;Element [name=@errorText]&gt; contains text &#39;Please select a subject from the list provided.&#39; in 5000ms - expected &#34;contains text &#39;Please select a subject from the list provided.&#39;&#34; but got: &#34;does not contain &#39;Please select a subject from the list provided.&#39;&#34; (5328ms)">    at Invalid Test Case 6: Missing Subject Heading and Message (D:\Mostafa\My_Learning_Projects\SDET\SDET\UI\test_scripts\contact_us_test.js:123:21)</failure>
+
+    
+    </testcase>
+  
+    <testcase name="Invalid Test Case 7: Missing All Required Fields" classname="contact_us_test" time="7.118" assertions="3">
+
+    
+
+      <failure message="Testing if element &lt;Element [name=@errorText]&gt; contains text &#39;Please select a subject from the list provided.&#39; in 5000ms - expected &#34;contains text &#39;Please select a subject from the list provided.&#39;&#34; but got: &#34;does not contain &#39;Please select a subject from the list provided.&#39;&#34; (5340ms)">    at Invalid Test Case 7: Missing All Required Fields (D:\Mostafa\My_Learning_Projects\SDET\SDET\UI\test_scripts\contact_us_test.js:132:21)</failure>
+
+    
+    </testcase>
+  
+    <testcase name="Invalid Test Case 8: Submit with required fields but Invalid Email Format" classname="contact_us_test" time="1.946" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>
