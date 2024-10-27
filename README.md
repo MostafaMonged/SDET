@@ -1,6 +1,7 @@
 [![CircleCI](https://dl.circleci.com/status-badge/img/circleci/SYQmSapKwUHtGUPnUdXG3X/6PpQF4f2oEPw7oWa274bC2/tree/main.svg?style=svg&circle-token=CCIPRJ_9Ap8ooDCGmmbcBMSArEskE_9863b4b75051d4550923f3966f12440f86954d51)](https://dl.circleci.com/status-badge/redirect/circleci/SYQmSapKwUHtGUPnUdXG3X/6PpQF4f2oEPw7oWa274bC2/tree/main)
 # SDET
  SDET 2024 - Technical Task
+ 
  All needed files are on **main branch**.
  
 ## Requirements
