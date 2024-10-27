@@ -39,3 +39,7 @@ Note: please the follow project structre to find the deliverables
 └──package.json               
 
 ```
+## Steps to run the project
+After you clone the repo do the following:
+1)```bash
+npm install
