@@ -39,7 +39,7 @@ For each of UI and API deliverables:
 - You will find tests documentation (if required) under the **test_docs** directory.
 
 ## CI/CD
-**Note:** The status badge is failing because there are some test cases that detect bugs in the UI and API. So, this badge will not be Passing until these bugs are fixed.
+**Note:** The status badge is failing because there are some test cases that detect bugs in the UI and API. So, this badge will not be passing until these bugs are fixed.
 
 **Note:** As UI tests and API tests are independent, I run them in parallel after dependencies installation:
 
