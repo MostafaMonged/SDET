@@ -6,7 +6,7 @@
 
 - [Node.js](https://nodejs.org/en/download/source-code)
 
-**Note:** Please the follow project structre to find the deliverables
+**Note:** Please the follow project structre to find the deliverables.
 
 ## Project Structure
 
