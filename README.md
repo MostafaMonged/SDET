@@ -7,7 +7,7 @@
 - [Node.js](https://nodejs.org/en/download/source-code)
 - [Chrome web browser](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwi02cS4_66JAxWlXA8CHU11GNcYABABGgJ0Yg&co=1&ase=2&gclid=CjwKCAjwyfe4BhAWEiwAkIL8sP-fTYDT_P_e_dVo9jKNSazvbiZhZ-cLh4w5gsPAwEGLYFCB8hX2ChoCjmgQAvD_BwE&ei=PGweZ7mIG4O9hbIP2rTdsQk&ohost=www.google.com&cid=CAESVOD2SQl4xMgk99ExH32AA0XX-tM9tWOhDN3q9DpcHK-g9dV2tpozfAZMPyrQAFBpGC2XEjsJgEfwL8U9QV1M47Sw9M6DJb5S-8uT8xF7NX5y3-Kcww&sig=AOD64_2pwTfNWySo-A4u-X7_A0vRnkx2GA&q&sqi=2&nis=4&adurl&ved=2ahUKEwi5lrW4_66JAxWDXkEAHVpaN5YQqyQoAHoECAgQDA)
 
-**Note:** Please follow the project structre to find the deliverables.
+**Note:** Please follow the project structure to find the deliverables.
 
 ## Project Structure
 
@@ -39,7 +39,7 @@ For each of UI and API deliverables:
 - You will find tests documentation (if required) under the **test_docs** directory.
 
 ## CI/CD
-**Note:** The status badge is failed because there are some test cases that detect bugs in the UI and API. So, this badge will not be Passing until this bugs are fixed.
+**Note:** The status badge is failing because there are some test cases that detect bugs in the UI and API. So, this badge will not be Passing until these bugs are fixed.
 
 **Note:** As UI tests and API tests are independent, I run them in parallel after dependencies installation:
 
@@ -62,7 +62,7 @@ npm run test:UI
 ```bash
 npm run test:API:unix
 ```
-   for windows powershell:
+   for Windows PowerShell:
 ```bash
 npm run test:API:win
 ```
