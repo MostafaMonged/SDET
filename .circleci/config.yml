@@ -18,9 +18,6 @@ jobs:
           name: Install Dependencies
           command: npm install
       - run:
-          name: Debug Chromedriver Path
-          command: which chromedriver || echo "Chromedriver not found"
-      - run:
           name: Run UI Tests
           command: npm run test:UI
 
