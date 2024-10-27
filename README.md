@@ -53,7 +53,7 @@ npm run test:UI
 ```bash
 npm run test:API
 ```
-you can use this alternative way to run API tests manually step by step (create tests then authenticate tests then read then update then delete)
+Alternative way to test specific API route is to use these commands in a row.
 ```bash
 npm run test:create
 npm run test:authenticate
