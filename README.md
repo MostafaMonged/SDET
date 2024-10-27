@@ -67,15 +67,13 @@ npm run dev
 ```
 2) To test individual routes, use the corresponding command below:
 
-| Route          | Command                         |
-|----------------|---------------------------------|
-| Create         | ```bash 
-npm run test:create
-```  |
-| Authenticate   | ```bash npm run test:authenticate``` |
-| Read           | ```bash npm run test:read```    |
-| Update         | ```bash npm run test:update```  |
-| Delete         | ```bash npm run test:delete```  |
+| Route        | Command                   |
+|--------------|---------------------------|
+| Create       | `npm run test:create`     |
+| Authenticate | `npm run test:authenticate` |
+| Read         | `npm run test:read`       |
+| Update       | `npm run test:update`     |
+| Delete       | `npm run test:delete`     |
 
 
 
