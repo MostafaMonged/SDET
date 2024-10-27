@@ -41,6 +41,7 @@ For each of UI and API deliverables:
 **Note:** The status badge is failed because there are some test cases that detect bugs in the UI and API. So, this badge will not be Passing until this bugs are fixed.
 
 **Note:** As UI tests and API tests are independent, I run them in parallel after dependencies installation:
+
 ![image](https://github.com/user-attachments/assets/93415409-fa50-48c2-9c7e-f8558faa34a3)
 
 
