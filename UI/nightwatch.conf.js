@@ -13,9 +13,9 @@ module.exports = {
       },
 
       webdriver: {
-        start_process: !isCI,  // Only start Chromedriver locally
-        server_path: isCI ? '' : require('chromedriver').path,  // Set path only for local
-        port: 9515,
+        start_process: true,
+        server_path: '',
+        port: 9515
       },
 
       // Reporter settings

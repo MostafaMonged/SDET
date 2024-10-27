@@ -1,51 +1,34 @@
-# version: 2.1
-
-# jobs:
-#   ui_test:
-#     docker:
-#       - image: cimg/node:18.14.0-browsers
-#     steps:
-#       - checkout
-#       - run:
-#           name: Install Dependencies
-#           command: npm install
-#       - run:
-#           name: Debug Chromedriver Path
-#           command: which chromedriver || echo "Chromedriver not found"
-#       - run:
-#           name: Run UI Tests
-#           command: npm run test:UI
-
-# workflows:
-#   version: 2
-
-#   ui_and_api_tests:
-#     jobs:
-#       - ui_test:
-#           filters:
-#             branches:
-#               only: UI
-version: '2.1'
+version: 2.1
 orbs:
   browser-tools: circleci/browser-tools@1.4.8
 jobs:
-  test:
+  ui_test:
     docker:
-      - image: cimg/node:20.4.0-browsers
+      - image: cimg/node:18.14.0-browsers
     steps:
       - browser-tools/install-chrome
       - browser-tools/install-chromedriver
       - run:
+          name: Check install
           command: |
             google-chrome --version
             chromedriver --version
-          name: Check install
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - run:
+          name: Debug Chromedriver Path
+          command: which chromedriver || echo "Chromedriver not found"
+      - run:
+          name: Run UI Tests
+          command: npm run test:UI
+
 workflows:
   version: 2
-
-  test_orb:
+  ui_and_api_tests:
     jobs:
-      - test:
+      - ui_test:
           filters:
             branches:
               only: UI
