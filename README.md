@@ -69,7 +69,9 @@ npm run dev
 
 | Route          | Command                         |
 |----------------|---------------------------------|
-| Create         | ```bash npm run test:create```  |
+| Create         | ```bash 
+npm run test:create
+```  |
 | Authenticate   | ```bash npm run test:authenticate``` |
 | Read           | ```bash npm run test:read```    |
 | Update         | ```bash npm run test:update```  |
