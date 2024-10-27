@@ -19,11 +19,11 @@ jobs:
           name: Install Dependencies
           command: npm install
       - run:
-          name: Run UI Tests
-          command: npm run test:UI
-      - run:
           name: Start API Server and Run API Tests
           command: npm run test:API
+      - run:
+          name: Run UI Tests
+          command: npm run test:UI
 
       - store_artifacts:
           path: api_server.log
