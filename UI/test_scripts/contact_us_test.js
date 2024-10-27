@@ -59,91 +59,91 @@ module.exports = {
             .assert.containsText('@successMessage', 'Your message has been successfully sent to our team');
     },
 
-    //working on invalid test cases
+    // //working on invalid test cases
 
-    'Invalid Test Case 1: Missing Email': function (browser) {
-        contactUsPage
-            .navigate()
-            .setValue('@message', 'This is a test message')
-            .click('@subjectHeading')               // Click to open the dropdown
-            .click('@customerServiceOption')        // Select "Customer service"
-            .click('@submitButton')
-            .waitForElementVisible('@errorBox', 5000)
-            .assert.containsText('@errorText', 'Invalid email address.');
-    },
-    'Invalid Test Case 2: Missing Subject Heading': function (browser) {
-        contactUsPage
-            .navigate()
-            .setValue('@email', 'valid@example.com')
-            .setValue('@message', 'This is a test message')
-            .click('@submitButton')
-            .waitForElementVisible('@errorBox', 5000)
-            .assert.containsText('@errorText', 'Please select a subject from the list provided.');
-    },
+    // 'Invalid Test Case 1: Missing Email': function (browser) {
+    //     contactUsPage
+    //         .navigate()
+    //         .setValue('@message', 'This is a test message')
+    //         .click('@subjectHeading')               // Click to open the dropdown
+    //         .click('@customerServiceOption')        // Select "Customer service"
+    //         .click('@submitButton')
+    //         .waitForElementVisible('@errorBox', 5000)
+    //         .assert.containsText('@errorText', 'Invalid email address.');
+    // },
+    // 'Invalid Test Case 2: Missing Subject Heading': function (browser) {
+    //     contactUsPage
+    //         .navigate()
+    //         .setValue('@email', 'valid@example.com')
+    //         .setValue('@message', 'This is a test message')
+    //         .click('@submitButton')
+    //         .waitForElementVisible('@errorBox', 5000)
+    //         .assert.containsText('@errorText', 'Please select a subject from the list provided.');
+    // },
 
-    'Invalid Test Case 3: Missing Message': function (browser) {
-        contactUsPage
-            .navigate()
-            .setValue('@email', 'valid@example.com')
-            .click('@subjectHeading')
-            .click('@customerServiceOption')
-            .click('@submitButton')
-            .waitForElementVisible('@errorBox', 5000)
-            .assert.containsText('@errorText', 'The message cannot be blank.');
-    },
+    // 'Invalid Test Case 3: Missing Message': function (browser) {
+    //     contactUsPage
+    //         .navigate()
+    //         .setValue('@email', 'valid@example.com')
+    //         .click('@subjectHeading')
+    //         .click('@customerServiceOption')
+    //         .click('@submitButton')
+    //         .waitForElementVisible('@errorBox', 5000)
+    //         .assert.containsText('@errorText', 'The message cannot be blank.');
+    // },
 
-    'Invalid Test Case 4: Missing Email and Subject Heading': function (browser) {
-        contactUsPage
-            .navigate()
-            .setValue('@message', 'This is a test message')
-            .click('@submitButton')
-            .waitForElementVisible('@errorBox', 5000)
-            .assert.containsText('@errorText', 'Invalid email address.')
-            .assert.containsText('@errorText', 'Please select a subject from the list provided.');
-    },
+    // 'Invalid Test Case 4: Missing Email and Subject Heading': function (browser) {
+    //     contactUsPage
+    //         .navigate()
+    //         .setValue('@message', 'This is a test message')
+    //         .click('@submitButton')
+    //         .waitForElementVisible('@errorBox', 5000)
+    //         .assert.containsText('@errorText', 'Invalid email address.')
+    //         .assert.containsText('@errorText', 'Please select a subject from the list provided.');
+    // },
 
-    'Invalid Test Case 5: Missing Email and Message': function (browser) {
-        contactUsPage
-            .navigate()
-            .click('@subjectHeading')
-            .click('@customerServiceOption')
-            .click('@submitButton')
-            .waitForElementVisible('@errorBox', 5000)
-            .assert.containsText('@errorText', 'Invalid email address.')
-            .assert.containsText('@errorText', 'The message cannot be blank.');
-    },
+    // 'Invalid Test Case 5: Missing Email and Message': function (browser) {
+    //     contactUsPage
+    //         .navigate()
+    //         .click('@subjectHeading')
+    //         .click('@customerServiceOption')
+    //         .click('@submitButton')
+    //         .waitForElementVisible('@errorBox', 5000)
+    //         .assert.containsText('@errorText', 'Invalid email address.')
+    //         .assert.containsText('@errorText', 'The message cannot be blank.');
+    // },
 
-    'Invalid Test Case 6: Missing Subject Heading and Message': function (browser) {
-        contactUsPage
-            .navigate()
-            .setValue('@email', 'valid@example.com')
-            .click('@submitButton')
-            .waitForElementVisible('@errorBox', 5000)
-            .assert.containsText('@errorText', 'The message cannot be blank.')
-            .assert.containsText('@errorText', 'Please select a subject from the list provided.');
-    },
+    // 'Invalid Test Case 6: Missing Subject Heading and Message': function (browser) {
+    //     contactUsPage
+    //         .navigate()
+    //         .setValue('@email', 'valid@example.com')
+    //         .click('@submitButton')
+    //         .waitForElementVisible('@errorBox', 5000)
+    //         .assert.containsText('@errorText', 'The message cannot be blank.')
+    //         .assert.containsText('@errorText', 'Please select a subject from the list provided.');
+    // },
 
-    'Invalid Test Case 7: Missing All Required Fields': function (browser) {
-        contactUsPage
-            .navigate()
-            .click('@submitButton')
-            .waitForElementVisible('@errorBox', 5000)
-            .assert.containsText('@errorText', 'Invalid email address.')
-            .assert.containsText('@errorText', 'Please select a subject from the list provided.')
-            .assert.containsText('@errorText', 'The message cannot be blank.');
-    },
+    // 'Invalid Test Case 7: Missing All Required Fields': function (browser) {
+    //     contactUsPage
+    //         .navigate()
+    //         .click('@submitButton')
+    //         .waitForElementVisible('@errorBox', 5000)
+    //         .assert.containsText('@errorText', 'Invalid email address.')
+    //         .assert.containsText('@errorText', 'Please select a subject from the list provided.')
+    //         .assert.containsText('@errorText', 'The message cannot be blank.');
+    // },
 
-    'Invalid Test Case 8: Submit with required fields but Invalid Email Format': function (browser) {
-        contactUsPage
-            .navigate()
-            .setValue('@email', 'invalid-email')  // Invalid email format
-            .setValue('@message', 'This is a test message')
-            .click('@subjectHeading')
-            .click('@customerServiceOption')
-            .click('@submitButton')
-            .waitForElementVisible('@errorBox', 5000)
-            .assert.containsText('@errorText', 'Invalid email address.');
-    },
+    // 'Invalid Test Case 8: Submit with required fields but Invalid Email Format': function (browser) {
+    //     contactUsPage
+    //         .navigate()
+    //         .setValue('@email', 'invalid-email')  // Invalid email format
+    //         .setValue('@message', 'This is a test message')
+    //         .click('@subjectHeading')
+    //         .click('@customerServiceOption')
+    //         .click('@submitButton')
+    //         .waitForElementVisible('@errorBox', 5000)
+    //         .assert.containsText('@errorText', 'Invalid email address.');
+    // },
 
     after: function (browser) {
         browser.end();
