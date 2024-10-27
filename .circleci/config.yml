@@ -38,6 +38,11 @@ jobs:
       - attach_workspace:
           at: .
       - run:
+          name: Check Browser Installation
+          command: |
+            google-chrome --version
+            chromedriver --version
+      - run:
           name: Run UI Tests
           command: npm run test:UI
 
