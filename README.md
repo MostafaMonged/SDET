@@ -58,7 +58,7 @@ npm install
 npm run test:UI
 ```
 3) Run API tests
-- for Linux/Unix shells:
+- for Linux/Unix-based shells:
 ```bash
 npm run test:API:unix
 ```
