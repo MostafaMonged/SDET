@@ -8,13 +8,6 @@ jobs:
       - image: cimg/node:18.14.0-browsers
     steps:
       - checkout
-      - browser-tools/install-chrome
-      - browser-tools/install-chromedriver
-      - run:
-          name: Check Browser Installation
-          command: |
-            google-chrome --version
-            chromedriver --version
       - restore_cache:
           keys:
             - node-deps-{{ checksum "package-lock.json" }}
@@ -37,6 +30,8 @@ jobs:
     steps:
       - attach_workspace:
           at: .
+      - browser-tools/install-chrome
+      - browser-tools/install-chromedriver
       - run:
           name: Check Browser Installation
           command: |
