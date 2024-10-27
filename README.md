@@ -58,13 +58,11 @@ npm install
 npm run test:UI
 ```
 3) Run API tests
-   
-   for Linux/Unix shells:
+- for Linux/Unix shells:
 ```bash
 npm run test:API:unix
 ```
-
-   for Windows PowerShell:
+- for Windows PowerShell:
 ```bash
 npm run test:API:win
 ```
