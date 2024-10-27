@@ -58,7 +58,7 @@ npm run test:UI
 ```bash
 npm run test:API
 ```
-Alternative way to test specific API route is to use these commands in a row.
+Alternative way to test specific API route is to use its related command from the list below:
 ```bash
 npm run test:create
 npm run test:authenticate
