@@ -49,7 +49,7 @@ jobs:
           at: .
       - run:
           name: Start API Server and Run API Tests
-          command: npm run test:API
+          command: npm run test:API:unix
       - store_artifacts:
           path: api_server.log
           destination: api_server_logs
